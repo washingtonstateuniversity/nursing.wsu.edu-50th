@@ -13,6 +13,17 @@ module.exports = function( grunt ) {
 			dist: {
 				src: "css/*.css",
 				dest: "tmp-style.css"
+			},
+			spine_js: {
+				src: [
+					"js/src/wsu_autocomplete.js",
+					"js/src/ui.spine.js",
+					"js/src/ui.spine.framework.js",
+					"js/src/ui.spine.search.js",
+					"js/src/ui.spine.social.js",
+					"js/src/spine.js"
+				],
+				dest: "js/spine.js"
 			}
 		},
 
@@ -83,6 +94,13 @@ module.exports = function( grunt ) {
 			}
 		},
 
+		uglify: {
+			spine_js: {
+				src: "js/spine.js",
+				dest: "js/spine.min.js"
+			}
+		},
+
 		phpcs: {
 			plugin: {
 				src: "./"
@@ -124,9 +142,10 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( "grunt-stylelint" );
 	grunt.loadNpmTasks( "grunt-jscs" );
 	grunt.loadNpmTasks( "grunt-contrib-jshint" );
+	grunt.loadNpmTasks( "grunt-contrib-uglify" );
 
 	// Default task(s).
-	grunt.registerTask( "default", [ "jscs", "jshint", "stylelint", "concat", "postcss", "clean", "phpcs" ] );
+	grunt.registerTask( "default", [ "jscs", "jshint", "uglify", "stylelint", "concat", "postcss", "clean", "phpcs" ] );
 
 	grunt.registerTask( "serve", [ "connect", "watch" ] );
 };
