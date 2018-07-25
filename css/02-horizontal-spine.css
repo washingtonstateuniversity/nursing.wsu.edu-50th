@@ -1,64 +1,3 @@
-/*
- Theme Name:  WSU College of Nursing 50th Anniversary Theme
- Theme URI:   https://nursing.wsu.edu
- Description: A Spine child theme for the College of Nursing 50th Anniversary.
- Author:      WSU University Communications, philcable
- Author URI:  https://web.wsu.edu
- Template:    spine
- Version:     0.0.1
-*/
-
-#wsu-header {
-	background: linear-gradient(to right, #a60f2d 7%, #ca1237 27%, #ca1237 41%, #a60f2d 75%);
-	display: none;
-	text-align: right;
-}
-
-#wsu-header a {
-	color: #fff;
-	text-transform: uppercase;
-	font-size: 11px;
-	letter-spacing: .5px;
-	margin-right: 2rem;
-	position: relative;
-	transition: color .3s ease;
-}
-
-#wsu-header a:after {
-	background: url(images/icons/link.svg) left center no-repeat;
-	background-size: 98%;
-	content: "";
-	height: 100%;
-	margin-left: .25rem;
-	opacity: 0;
-	position: absolute;
-	top: 0;
-	transition: opacity .3s ease;
-	width: 1em;
-}
-
-#wsu-header a:hover {
-	color: #cecece;
-}
-
-#wsu-header .a:hover:after {
-	opacity: 1;
-}
-
-@media (min-width: 990px) {
-
-	#wsu-header {
-		display: block;
-	}
-}
-
-@media (min-width: 1252px) {
-
-	#wsu-header a {
-		margin-right: calc(50vw - (1188px / 2));
-	}
-}
-
 /* Overwrite max width constraint */
 #jacket #binder {
 	max-width: 100%;
@@ -130,10 +69,8 @@
 	}
 
 	#spine #spine-sitenav ul {
-		display: -ms-flexbox;
 		display: flex;
-		-ms-flex-pack: center;
-		    justify-content: center;
+		justify-content: center;
 	}
 
 	#spine #spine-sitenav li {
@@ -194,13 +131,11 @@
 	}
 
 	.spine-animating.spine-move-right #glue {
-		-ms-transform: translate(100vw);
-		    transform: translate(100vw);
+		transform: translate(100vw);
 	}
 
 	.spine-animating.spine-move-left #glue {
-		-ms-transform: translate(-100vw);
-		    transform: translate(-100vw);
+		transform: translate(-100vw);
 	}
 
 	.spine-mobile #spine footer {
@@ -212,4 +147,3 @@
 		width: 198px;
 	}
 }
-/*# sourceMappingURL=style.css.map */

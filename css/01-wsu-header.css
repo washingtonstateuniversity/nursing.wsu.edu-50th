@@ -1,0 +1,50 @@
+#wsu-header {
+	background: linear-gradient(to right, #a60f2d 7%, #ca1237 27%, #ca1237 41%, #a60f2d 75%);
+	display: none;
+	text-align: right;
+}
+
+#wsu-header a {
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 11px;
+	letter-spacing: .5px;
+	margin-right: 2rem;
+	position: relative;
+	transition: color .3s ease;
+}
+
+#wsu-header a:after {
+	background: url(images/icons/link.svg) left center no-repeat;
+	background-size: 98%;
+	content: "";
+	height: 100%;
+	margin-left: .25rem;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	transition: opacity .3s ease;
+	width: 1em;
+}
+
+#wsu-header a:hover {
+	color: #cecece;
+}
+
+#wsu-header .a:hover:after {
+	opacity: 1;
+}
+
+@media (min-width: 990px) {
+
+	#wsu-header {
+		display: block;
+	}
+}
+
+@media (min-width: 1252px) {
+
+	#wsu-header a {
+		margin-right: calc(50vw - (1188px / 2));
+	}
+}
