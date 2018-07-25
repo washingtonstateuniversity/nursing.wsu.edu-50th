@@ -70,11 +70,6 @@
 	max-width: 1188px;
 }
 
-/* Temporary overwrite to get the nav out of the way */
-.spine-mobile #spine {
-	display: block;
-}
-
 @media (min-width: 990px) {
 
 	#spine {
