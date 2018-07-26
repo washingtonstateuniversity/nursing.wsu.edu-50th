@@ -42,7 +42,7 @@ function display_wsuwp_cards( $atts ) {
 	$defaults = array(
 		'count' => 10,
 		'category' => '',
-		'order' => '',
+		'orderby' => '',
 		'effects' => '',
 	);
 
@@ -52,11 +52,13 @@ function display_wsuwp_cards( $atts ) {
 		'posts_per_page' => absint( $atts['count'] ),
 	);
 
-	if ( $atts['category'] ) {
-		$args['orderby'] = sanitize_key( $atts['order'] );
+	$orderby_whitelist = array( 'title', 'rand' );
+
+	if ( $atts['orderby'] && in_array( $atts['orderby'], $orderby_whitelist, true ) ) {
+		$args['orderby'] = sanitize_key( $atts['orderby'] );
 	}
 
-	if ( $atts['category'] ) {
+	if ( $atts['category'] && term_exists( sanitize_key( $atts['category'] ), 'category' ) ) {
 		$args['category_name'] = sanitize_key( $atts['category'] );
 	}
 
