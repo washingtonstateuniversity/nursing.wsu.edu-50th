@@ -1,5 +1,7 @@
 <?php
 
+require_once 'includes/cards-shortcode/cards-shortcode.php';
+
 add_filter( 'spine_child_theme_version', 'nursing_anniversary_theme_version' );
 add_action( 'init', 'nursing_anniversary_remove_spine_wp_enqueue_scripts' );
 add_action( 'wp_enqueue_scripts', 'nursing_anniversary_spine_wp_enqueue_scripts', 20 );
