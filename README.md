@@ -14,5 +14,5 @@ This theme includes the `[wsuwp_cards]` shortcode. At its most basic, it display
 * `category` allows the display of posts from a specific category based on the slug provided;
 * `orderby` accepts either `title` or `rand` to display posts respectively by title or in random order;
 * `effects` accepts comma-separated values for adding scroll-based effects to the cards:
-  * `fix-images` sticks the card featured image to the top of the viewport once they reach it, and restores them to regular scrolling behavior once the bottom of the image is in the viewport;
-  * `fade-images` decreases the opacity of the card feature image as it is scrolled up out of the viewport.
+  * `fix-images` fixes the position of each card's feature image once it reaches the top of the viewport, then restores regular scrolling behavior once the bottom of the image is in the viewport;
+  * `fade-images` decreases the opacity of each card's feature image as it is scrolled up out of the viewport.
