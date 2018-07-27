@@ -1,9 +1,17 @@
 <?php
 
+require_once 'includes/cards-shortcode/cards-shortcode.php';
+
 add_filter( 'spine_child_theme_version', 'nursing_anniversary_theme_version' );
 add_action( 'init', 'nursing_anniversary_remove_spine_wp_enqueue_scripts' );
 add_action( 'wp_enqueue_scripts', 'nursing_anniversary_spine_wp_enqueue_scripts', 20 );
 add_filter( 'nav_menu_item_id', 'nursing_anniversary_nav_menu_id', 20 );
+
+// Disable background and thumbnail images for posts and pages.
+add_filter( 'spine_post_supports_background_image', '__return_false' );
+add_filter( 'spine_page_supports_background_image', '__return_false' );
+add_filter( 'spine_post_supports_thumbnail_image', '__return_false' );
+add_filter( 'spine_page_supports_thumbnail_image', '__return_false' );
 
 /**
  * Provides a theme version for use in cache busting.

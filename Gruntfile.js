@@ -3,7 +3,7 @@ module.exports = function( grunt ) {
 		pkg: grunt.file.readJSON( "package.json" ),
 
 		stylelint: {
-			src: [ "css/*.css" ]
+			src: [ "css/*.css", "includes/*/src/*.css" ]
 		},
 
 		concat: {
@@ -40,6 +40,12 @@ module.exports = function( grunt ) {
 			dist: {
 				src: "tmp-style.css",
 				dest: "style.css"
+			},
+			cards: {
+				cwd: "includes/cards-shortcode/src/",
+				src: "*.css",
+				dest: "includes/cards-shortcode",
+				expand: true
 			}
 		},
 
@@ -52,7 +58,7 @@ module.exports = function( grunt ) {
 
 		jscs: {
 			scripts: {
-				src: [ "Gruntfile.js", "src/js/*.js" ],
+				src: [ "Gruntfile.js", "src/js/*.js", "includes/*/src/*.js" ],
 				options: {
 					preset: "jquery",
 					requireCamelCaseOrUpperCaseIdentifiers: false, // We rely on name_name too much to change them all.
@@ -76,7 +82,7 @@ module.exports = function( grunt ) {
 				}
 			},
 			theme_scripts: {
-				src: [ "src/js/*.js" ],
+				src: [ "js/src/*.js", "includes/cards-shortcode/src/*.js" ],
 				options: {
 					bitwise: true,
 					curly: true,
@@ -98,6 +104,15 @@ module.exports = function( grunt ) {
 			spine_js: {
 				src: "js/spine.js",
 				dest: "js/spine.min.js"
+			},
+			cards_shortcode: {
+				files: [ {
+					expand: true,
+					cwd: "includes/cards-shortcode/src/",
+					src: "*.js",
+					dest: "includes/cards-shortcode/",
+					ext: ".min.js"
+				} ]
 			}
 		},
 

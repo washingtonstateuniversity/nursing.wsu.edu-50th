@@ -1,0 +1,9 @@
+.fixed .content-card--feature-image-wrapper {
+	position: fixed;
+	top: 0;
+}
+
+.absolute .content-card--feature-image-wrapper {
+	bottom: 0;
+	position: absolute;
+}

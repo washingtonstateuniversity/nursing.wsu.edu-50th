@@ -1,0 +1,53 @@
+.content-card {
+	display: flex;
+	min-height: 100vh;
+	position: relative;
+}
+
+.content-card--feature-image,
+.content-card--copy {
+	box-sizing: border-box;
+	width: 50%;
+}
+
+.content-card--feature-image {
+	overflow: hidden;
+}
+
+.content-card:nth-of-type(odd) .content-card--feature-image {
+	order: 1;
+}
+
+.content-card--feature-image-wrapper {
+	background: top center no-repeat;
+	background-size: cover;
+	height: 100vh;
+	max-width: none;
+	text-indent: -100%;
+	width: auto;
+}
+
+.content-card--copy {
+	padding: 12em 8%;
+}
+
+@media screen and ( max-width: 989px ) {
+
+	.content-card {
+		display: block;
+	}
+
+	.content-card--feature-image,
+	.content-card--copy {
+		width: 100%;
+	}
+
+	.content-card--feature-image-wrapper {
+		height: 40vh;
+		width: 100%;
+	}
+
+	.content-card--copy {
+		padding: 4em 4em 6em;
+	}
+}

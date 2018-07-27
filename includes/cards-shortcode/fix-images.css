@@ -1,0 +1,11 @@
+.fixed .content-card--feature-image-wrapper {
+	position: fixed;
+	top: 0;
+}
+
+.absolute .content-card--feature-image-wrapper {
+	bottom: 0;
+	position: absolute;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9maXgtaW1hZ2VzLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtDQUNDLGdCQUFnQjtDQUNoQixPQUFPO0NBQ1A7O0FBRUQ7Q0FDQyxVQUFVO0NBQ1YsbUJBQW1CO0NBQ25CIiwiZmlsZSI6ImZpeC1pbWFnZXMuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmZpeGVkIC5jb250ZW50LWNhcmQtLWZlYXR1cmUtaW1hZ2Utd3JhcHBlciB7XG5cdHBvc2l0aW9uOiBmaXhlZDtcblx0dG9wOiAwO1xufVxuXG4uYWJzb2x1dGUgLmNvbnRlbnQtY2FyZC0tZmVhdHVyZS1pbWFnZS13cmFwcGVyIHtcblx0Ym90dG9tOiAwO1xuXHRwb3NpdGlvbjogYWJzb2x1dGU7XG59XG4iXX0= */
