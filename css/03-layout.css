@@ -1,0 +1,22 @@
+.fixed-background {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 500px;
+}
+
+@media (min-width: 990px) {
+
+	.fixed-background {
+		background-attachment: fixed;
+		position: relative;
+		width: 100vw;
+	}
+}
+
+@media (min-width: 1188px) {
+
+	.fixed-background {
+		left: calc(-50vw + (1188px / 2));
+	}
+}
