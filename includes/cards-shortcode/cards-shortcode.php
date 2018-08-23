@@ -39,6 +39,12 @@ function setup_additional_post_images() {
  * @since 0.0.1
  */
 function display_wsuwp_cards( $atts ) {
+
+	// Bail now if Multiple Post Thumbnails isn't active.
+	if ( ! class_exists( 'MultiPostThumbnails' ) ) {
+		return;
+	}
+
 	$defaults = array(
 		'count' => 10,
 		'category' => '',
@@ -102,6 +108,7 @@ function display_wsuwp_cards( $atts ) {
 
 	while ( $query->have_posts() ) {
 		$query->the_post();
+
 		$image_desktop_src = \MultiPostThumbnails::get_post_thumbnail_url( 'post', 'desktop-image', get_the_ID(), 'full' );
 		$image_mobile_src = \MultiPostThumbnails::get_post_thumbnail_url( 'post', 'mobile-image', get_the_ID(), 'full' );
 
