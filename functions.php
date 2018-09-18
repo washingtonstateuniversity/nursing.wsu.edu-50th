@@ -21,7 +21,7 @@ add_filter( 'spine_page_supports_thumbnail_image', '__return_false' );
  * @return string
  */
 function nursing_anniversary_theme_version() {
-	return '0.0.1';
+	return '0.0.2';
 }
 
 /**
