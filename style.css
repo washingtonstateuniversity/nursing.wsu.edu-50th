@@ -106,20 +106,17 @@
 	}
 
 	#spine header {
-		background-color: transparent;
-		height: 95px;
+		height: 125px;
 		padding: 1.25rem 0;
 		position: relative;
 	}
 
 	#spine #wsu-signature {
-
-		/*background-image: url(images/);*/
+		background-image: url(./images/logo.png);
 		background-position: left;
-		background-size: 297px auto;
-		height: 57px;
-		margin-left: 2rem;
-		width: 297px;
+		background-size: 100% auto;
+		height: 100%;
+		width: 225px;
 		z-index: 5;
 	}
 
