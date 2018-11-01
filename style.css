@@ -5,7 +5,7 @@
  Author:      WSU University Communications, philcable
  Author URI:  https://web.wsu.edu
  Template:    spine
- Version:     0.0.2
+ Version:     0.0.3
 */
 
 #wsu-header {
@@ -207,6 +207,12 @@
 	#spine #wsu-global-links ul {
 		margin: 0 auto;
 		width: 198px;
+	}
+
+	#spine #wsu-signature {
+		background-image: url(./images/logo-horiz.svg);
+		background-size: contain;
+		height: 40px;
 	}
 }
 
