@@ -208,6 +208,12 @@
 		margin: 0 auto;
 		width: 198px;
 	}
+
+	#spine #wsu-signature {
+		background-image: url(./images/logo-horiz.svg);
+		background-size: contain;
+		height: 40px;
+	}
 }
 
 .fixed-background {
